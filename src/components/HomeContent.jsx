@@ -1,5 +1,4 @@
 import React from 'react';
-import SkillsCarousel from './SkillsCarousel'
 
 const HomeContent = () => {
 	
@@ -7,12 +6,12 @@ const HomeContent = () => {
 		<div className='App'>
 
 			<div className='clipped-title'>
-				<h1 className='h-1 '>CHRISTOPHER EDGAR</h1>
+				<h1 className='h-1 '>CHRISTOPHER <br /> EDGAR</h1>
 			</div>
 
 			<p className='title'>Full Stack Web Developer</p>
 
-			
+
 
 			
 
