@@ -1,42 +1,41 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Alert, Badge } from 'reactstrap';
+import { Button } from 'reactstrap';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import HomeContent from './components/HomeContent'
+import AboutMe from './components/AboutMe'
+import Footer from './components/Footer'
 
 class App extends Component {
 
-// logger = () => {
-//   console.log('sefa')
-// }
+componentDidMount() {
+  
+}
 
   render() {
 
-  const Index = () => <h2>Home</h2>;
-  const About = () => <h2>About</h2>;
-  const Users = () => <h2>Users</h2>;
+  const Index = () => <HomeContent />;
+  const About = () => <AboutMe />;
+  const Skills = () => <h2>Skills</h2>;
+
 
     return (
       
       <Router>
         <div className="App">
-          <nav>
 
+        <nav>
+          <Link to="/"><Button color="info">Home</Button></Link>
+          <Link to="/about/"><Button color="info">About</Button></Link>
+          <Link to="/skills/"><Button color="info">Skills</Button></Link>
+        </nav>
 
-                <Link to="/">Home</Link>
+        <Route path="/" exact component={Index} />
+        <Route path="/about/" component={About} />
+        <Route path="/skills/" component={Skills} />
 
-
-                <Link to="/about/">About</Link>
-
-
-                <Link to="/users/">Users</Link>
-
-
-          </nav>
-
-          <Route path="/" exact component={Index} />
-          <Route path="/about/" component={About} />
-          <Route path="/users/" component={Users} />
-
+          
+          <Footer />
         </div>
       </Router>
 

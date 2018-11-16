@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'pace-progressbar';
+import 'pace-progressbar/themes/orange/pace-theme-corner-indicator.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
